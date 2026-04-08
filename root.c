@@ -1,6 +1,6 @@
-
 #include "main.h"
 
+// a power function to use in the root function, since we can't use math.h functions
 long double powww(long double k, int l)
 {
     long double h = 1;
@@ -11,6 +11,7 @@ long double powww(long double k, int l)
     return h;
 }
 
+// a function to calculate the y-th root of x using the Newton-Raphson's method
 long double roott(int *x, int *y)
 {
     long double f;
@@ -25,7 +26,7 @@ long double roott(int *x, int *y)
         else if (*x < 0)
         {
             f = -1;
-
+        
             while (fabsl(powww(f, *y) - *x) > 0.00000001)
             {
                 f = (((*y - 1) * f) + (*x / (powww(f, (*y - 1))))) / *y;
