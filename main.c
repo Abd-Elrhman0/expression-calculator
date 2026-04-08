@@ -31,7 +31,7 @@ int main()
 		long double R = calc(&x, &y, op, type);
 
 		if(op == 'r')
-			printf("%d √ %d = %Lf\n", x, y, R);
+			printf("%d √ %d = %Lf\n", y, x, R);
 		else if (op == '~')
 			printf("= %Lf\n", R);
 		else if (op == '<')
